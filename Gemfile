@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -27,6 +28,16 @@ group :development do
   gem 'listen',                '3.2.1'
   gem 'spring',                '2.1.1'
   gem 'spring-watcher-listen', '2.0.1'
+  # Rubocop for linting and formatting
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-shopify', require: false
+  gem 'rubocop-rspec', require: false
+  gem 'rubocop-rails', require: false
+  # Solargraph for intellisense
+  gem 'solargraph', require: false
+  # Annotate all the models
+  gem 'annotate'
 end
 
 group :test do
